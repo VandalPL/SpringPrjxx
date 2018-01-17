@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="hotel2@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.4">
+    <root id="1"/>
+    <database id="2" parent="1" name="vehiclesdb">
+      <ObjectId>24625</ObjectId>
+      <Current>1</Current>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12292</ObjectId>
+    </database>
+    <database id="4" parent="1" name="labki">
+      <ObjectId>16384</ObjectId>
+    </database>
+    <database id="5" parent="1" name="labki2">
+      <ObjectId>24745</ObjectId>
+    </database>
+    <database id="6" parent="1" name="labki3">
+      <ObjectId>24821</ObjectId>
+    </database>
+    <database id="7" parent="1" name="hotel">
+      <ObjectId>33125</ObjectId>
+    </database>
+    <database id="8" parent="1" name="hotel2">
+      <ObjectId>33237</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="9" parent="1" name="apteka">
+      <ObjectId>49513</ObjectId>
+    </database>
+    <schema id="10" parent="8" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-01-17.15:59:57.228</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1078</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="11" parent="8" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="12" parent="8" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="13" parent="8" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+    </schema>
+    <schema id="14" parent="8" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+    </schema>
+    <schema id="15" parent="8" name="information_schema">
+      <ObjectId>12002</ObjectId>
+    </schema>
+    <sequence id="16" parent="10" name="reservation_id_seq">
+      <ObjectId>49771</ObjectId>
+      <StateNumber>1073</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="17" parent="10" name="rooms_id_seq">
+      <ObjectId>49780</ObjectId>
+      <StateNumber>1074</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="18" parent="10" name="accessories_id_seq">
+      <ObjectId>33340</ObjectId>
+      <StateNumber>804</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="19" parent="10" name="cart_id_seq">
+      <ObjectId>41331</ObjectId>
+      <StateNumber>864</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="20" parent="10" name="menu_id_seq">
+      <ObjectId>33416</ObjectId>
+      <StateNumber>832</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="21" parent="10" name="roles_id_seq">
+      <ObjectId>33348</ObjectId>
+      <StateNumber>805</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="22" parent="10" name="room_types_id_seq">
+      <ObjectId>33356</ObjectId>
+      <StateNumber>806</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="23" parent="10" name="users_id_seq">
+      <ObjectId>33377</ObjectId>
+      <StateNumber>809</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="24" parent="10" name="accessories">
+      <ObjectId>33342</ObjectId>
+      <StateNumber>1077</StateNumber>
+    </table>
+    <table id="25" parent="10" name="cart">
+      <ObjectId>41333</ObjectId>
+      <StateNumber>864</StateNumber>
+    </table>
+    <table id="26" parent="10" name="menu">
+      <ObjectId>33418</ObjectId>
+      <StateNumber>860</StateNumber>
+    </table>
+    <table id="27" parent="10" name="reservation">
+      <ObjectId>49773</ObjectId>
+      <StateNumber>1073</StateNumber>
+    </table>
+    <table id="28" parent="10" name="roles">
+      <ObjectId>33350</ObjectId>
+      <StateNumber>814</StateNumber>
+    </table>
+    <table id="29" parent="10" name="room_types">
+      <ObjectId>33358</ObjectId>
+      <StateNumber>1076</StateNumber>
+    </table>
+    <table id="30" parent="10" name="rooms">
+      <ObjectId>49782</ObjectId>
+      <StateNumber>1078</StateNumber>
+    </table>
+    <table id="31" parent="10" name="rooms_accessories">
+      <ObjectId>49789</ObjectId>
+      <StateNumber>1078</StateNumber>
+    </table>
+    <table id="32" parent="10" name="users">
+      <ObjectId>33379</ObjectId>
+      <StateNumber>861</StateNumber>
+    </table>
+    <table id="33" parent="10" name="users_roles">
+      <ObjectId>33385</ObjectId>
+      <StateNumber>815</StateNumber>
+    </table>
+    <column id="34" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>804</StateNumber>
+      <SequenceName>accessories_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;accessories_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="35" parent="24" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>804</StateNumber>
+    </column>
+    <index id="36" parent="24" name="accessories_pkey">
+      <ObjectId>33346</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="37" parent="24" name="accessories_pkey">
+      <ObjectId>33347</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>accessories_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>864</StateNumber>
+      <SequenceName>cart_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;cart_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="39" parent="25" name="id_food">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>864</StateNumber>
+    </column>
+    <column id="40" parent="25" name="id_user">
+      <Position>3</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>864</StateNumber>
+    </column>
+    <index id="41" parent="25" name="cart_pkey">
+      <ObjectId>41338</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="42" parent="25" name="cart_pkey">
+      <ObjectId>41339</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>cart_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <check id="43" parent="25" name="cart_id_check">
+      <ObjectId>41337</ObjectId>
+      <ColNames>id</ColNames>
+      <Predicate>id &gt;= 0</Predicate>
+    </check>
+    <column id="44" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>832</StateNumber>
+      <SequenceName>menu_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;menu_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="45" parent="26" name="name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>832</StateNumber>
+    </column>
+    <column id="46" parent="26" name="price">
+      <Position>3</Position>
+      <DataType>real|0</DataType>
+      <StateNumber>832</StateNumber>
+    </column>
+    <index id="47" parent="26" name="menu_pkey">
+      <ObjectId>33423</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="48" parent="26" name="menu_pkey">
+      <ObjectId>33424</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>menu_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <check id="49" parent="26" name="menu_price_check">
+      <ObjectId>33422</ObjectId>
+      <ColNames>price</ColNames>
+      <Predicate>price &lt;= (1000000)::double precision</Predicate>
+    </check>
+    <column id="50" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1073</StateNumber>
+      <SequenceName>reservation_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;reservation_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="51" parent="27" name="id_room">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1073</StateNumber>
+    </column>
+    <column id="52" parent="27" name="id_user">
+      <Position>3</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1073</StateNumber>
+    </column>
+    <column id="53" parent="27" name="reserv_id">
+      <Position>4</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1073</StateNumber>
+    </column>
+    <index id="54" parent="27" name="reservation_pkey">
+      <ObjectId>49778</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="55" parent="27" name="reservation_pkey">
+      <ObjectId>49779</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>reservation_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <check id="56" parent="27" name="reservation_id_check">
+      <ObjectId>49777</ObjectId>
+      <ColNames>id</ColNames>
+      <Predicate>id &gt;= 0</Predicate>
+    </check>
+    <column id="57" parent="28" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>805</StateNumber>
+      <SequenceName>roles_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;roles_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="58" parent="28" name="type">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>805</StateNumber>
+    </column>
+    <index id="59" parent="28" name="roles_pkey">
+      <ObjectId>33354</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="60" parent="28" name="roles_pkey">
+      <ObjectId>33355</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>roles_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="61" parent="29" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>806</StateNumber>
+      <SequenceName>room_types_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;room_types_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="62" parent="29" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>806</StateNumber>
+    </column>
+    <index id="63" parent="29" name="room_types_pkey">
+      <ObjectId>33363</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="64" parent="29" name="room_types_pkey">
+      <ObjectId>33364</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>room_types_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <check id="65" parent="29" name="room_types_id_check">
+      <ObjectId>33362</ObjectId>
+      <ColNames>id</ColNames>
+      <Predicate>id &gt;= 0</Predicate>
+    </check>
+    <column id="66" parent="30" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1074</StateNumber>
+      <SequenceName>rooms_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;rooms_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="67" parent="30" name="name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>1074</StateNumber>
+    </column>
+    <column id="68" parent="30" name="price">
+      <Position>3</Position>
+      <DataType>real|0</DataType>
+      <StateNumber>1074</StateNumber>
+    </column>
+    <column id="69" parent="30" name="reserv_id">
+      <Position>4</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1074</StateNumber>
+    </column>
+    <column id="70" parent="30" name="type_id">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1074</StateNumber>
+    </column>
+    <index id="71" parent="30" name="rooms_pkey">
+      <ObjectId>49787</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="72" parent="30" name="rooms_pkey">
+      <ObjectId>49788</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>rooms_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="73" parent="30" name="fk36pnbgx5yxaalc346d0astj9s">
+      <ObjectId>49792</ObjectId>
+      <ColNames>type_id</ColNames>
+      <RefTableId>33358</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>room_types</RefTableName>
+      <RefKeyName>room_types_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <check id="74" parent="30" name="rooms_price_check">
+      <ObjectId>49786</ObjectId>
+      <ColNames>price</ColNames>
+      <Predicate>price &lt;= (1000000)::double precision</Predicate>
+    </check>
+    <column id="75" parent="31" name="room_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1075</StateNumber>
+    </column>
+    <column id="76" parent="31" name="accessories_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1075</StateNumber>
+    </column>
+    <foreign-key id="77" parent="31" name="fkk8i9h1ee66cbiw5gajye3gwvs">
+      <ObjectId>49802</ObjectId>
+      <ColNames>room_id</ColNames>
+      <RefTableId>49782</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>rooms</RefTableName>
+      <RefKeyName>rooms_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="78" parent="31" name="fk899gns445v6tuxx3bchqd157h">
+      <ObjectId>49797</ObjectId>
+      <ColNames>accessories_id</ColNames>
+      <RefTableId>33342</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>accessories</RefTableName>
+      <RefKeyName>accessories_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="79" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>809</StateNumber>
+      <SequenceName>users_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="80" parent="32" name="enabled">
+      <Position>2</Position>
+      <DataType>boolean|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>809</StateNumber>
+    </column>
+    <column id="81" parent="32" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>809</StateNumber>
+    </column>
+    <column id="82" parent="32" name="username">
+      <Position>4</Position>
+      <DataType>varchar(36)|0</DataType>
+      <StateNumber>809</StateNumber>
+    </column>
+    <index id="83" parent="32" name="users_pkey">
+      <ObjectId>33383</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="84" parent="32" name="users_pkey">
+      <ObjectId>33384</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="85" parent="33" name="user_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>810</StateNumber>
+    </column>
+    <column id="86" parent="33" name="role_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>810</StateNumber>
+    </column>
+    <index id="87" parent="33" name="users_roles_pkey">
+      <ObjectId>33388</ObjectId>
+      <ColNames>user_id
+role_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="88" parent="33" name="users_roles_pkey">
+      <ObjectId>33389</ObjectId>
+      <ColNames>user_id
+role_id</ColNames>
+      <UnderlyingIndexName>users_roles_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="89" parent="33" name="fk2o0jvgh89lemvvo17cbqvdxaa">
+      <ObjectId>33410</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableId>33379</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="90" parent="33" name="fkj6m8fwv7oqv74fcehir1a9ffy">
+      <ObjectId>33405</ObjectId>
+      <ColNames>role_id</ColNames>
+      <RefTableId>33350</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>roles</RefTableName>
+      <RefKeyName>roles_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
