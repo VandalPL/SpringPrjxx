@@ -49,14 +49,20 @@ public class ReservationController {
 	@Secured("ROLE_ADMIN")
 	@RequestMapping(value="/reservation.html",params = {"id","id_room"},method = {RequestMethod.GET, RequestMethod.POST})
 	//@ResponseStatus(HttpStatus.CREATED)
-	public String deleteReservation(@ModelAttribute("vehicle") Room room,long id,long id_room){
+	public String deleteReservation(@ModelAttribute("vehicle") Room room,Reservation reservation,int id,long id_room){
 
 //		id_room = reservation.getId_room();
-		vehicleService.getVehicle(id_room).setReserv_id(0);
+		room = vehicleService.getVehicle(id_room);
+        room.setReserv_id(0);
+        vehicleService.saveVehicle(room);
 
+
+        reservation = reservationService.getReservation(id);
+        reservation.setReserv_id(0);
+        reservationService.saveReservation(reservation);
 		//vehicleService.saveVehicle(room);
-		reservationService.deleteReservation(id);
-		return "reservation.html";//po udanym dodaniu/edycji przekierowujemy na listę
+	//	reservationService.deleteReservation(id);
+		return "confirmation";
 	}
 
 
